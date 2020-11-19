@@ -11,10 +11,8 @@ describe TowersOfHanoi do
 
         it "initializes a starting board" do 
             expect(towers_of_hanoi.board).to eq([[3,2,1],[],[]])
-            p towers_of_hanoi.board
         end
         
-
 
         it "calls a start_game method after initialize"
 
@@ -23,6 +21,11 @@ describe TowersOfHanoi do
         it ""
 
     end
+
+    describe "#move" do
+        
+
+    end 
 
     describe "#start_game" do 
 
