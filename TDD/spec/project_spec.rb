@@ -2,20 +2,24 @@ require 'project'
 
 describe Array do 
     
-    subject(:array) { Array.new }
+    subject(:array) { [1,1,2,3,2,5] }
 
     describe "#my_uniq" do 
 
-        before(:each) do
-            array + [1,1,2,3,2,5]
+        it "not raise an error when called on array class" do
+            expect { array.my_uniq }.not_to raise_error
         end
 
-        it "call method on Array class" do
-            expect(array.is_a?(Array)).to be true
+        it "does not return nil" do 
+            expect(array.my_uniq).not_to eq(nil)
         end
 
-        it "returns array of unique elements" do 
-            expect(array.my_uniq).to eq(array.uniq)
+        it "removes duplicate elements" do
+            expect(array.my_uniq).to eq([1,2,3,5])
+        end
+
+        it "does not mutate original array" do
+            expect(array.my_uniq).not_to be(array)
         end
 
     end
