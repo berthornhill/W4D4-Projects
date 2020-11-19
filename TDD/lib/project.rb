@@ -25,7 +25,21 @@ class Array
         arr
     end
 
+    def my_transpose
+
+        col = Array.new(self.length) { [] }
+
+        self.each_with_index do |row, idx1|
+            row.each_with_index do |ele, idx2|
+                col[idx2] << ele
+            end
+        end
+
+        col
+    end
 
 
-
+    def stock_picker
+        
+    end
 end
