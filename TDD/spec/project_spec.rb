@@ -85,16 +85,19 @@ describe Array do
     end
 
     describe "#stock_picker" do 
-        subject(:stocks) { [] }
+        subject(:stocks) { [1,2,5,10,7,13]}
 
         it "not raise an error when called on array class" do
             expect { stocks.stock_picker }.not_to raise_error
         end
 
         it "finds an array of length 2" do 
-            expects(stocks.stock_picker.length).to eq(2)
+            expect(stocks.stock_picker.length).to eq(2)
         end
 
+        it "returns a pair of days with biggest stock price gain" do 
+            expect(stocks.stock_picker).to eq([0,5])
+        end
         
 
     end

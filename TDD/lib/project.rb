@@ -34,12 +34,28 @@ class Array
                 col[idx2] << ele
             end
         end
-
         col
     end
 
-
     def stock_picker
-        
+
+        max_pair = []
+        max_gain = 0
+
+        self.each_with_index do |ele1, idx1|
+            self.each_with_index do |ele2, idx2|
+                if idx2 > idx1 
+                    current_pair = [idx1, idx2]
+                    current_gain = ele2 - ele1
+                    if current_gain > max_gain
+                        max_gain = current_gain 
+                        max_pair = current_pair
+                    end
+                end 
+            end
+        end
+
+        max_pair
+        # [1,2]
     end
 end
