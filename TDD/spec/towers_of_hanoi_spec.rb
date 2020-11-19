@@ -24,6 +24,9 @@ describe TowersOfHanoi do
 
     describe "#move" do
         
+        it "uses gets.chomp to user input" do
+            expect 
+        end
 
     end 
 
