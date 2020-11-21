@@ -1,0 +1,6 @@
+gem 'rspec', "~> 3.8.0"
+gem 'byebug'
+gem 'pry'
+gem 'activesupport'
+gem 'byebug-color-printer'
+gem 'awesome_print'
